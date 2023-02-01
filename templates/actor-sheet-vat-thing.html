@@ -1,0 +1,132 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+	{{!-- Hidden inputs to reflect the sheet class and force stardard crit range --}}
+	<input type="hidden" id="system.details.sheetClass" name="system.details.sheetClass" value="Vat-Thing" data-dtype="String"/>
+	<input type="hidden" id="system.details.critRange" name="system.details.critRange" value="20" data-dtype="Number"/>
+	
+	{{!-- Sheet Header --}}
+	{{> systems/dcc/templates/actor-partial-pc-header.html }}
+	
+	{{!-- Sheet Tab Navigation --}}
+	<nav class="sheet-tabs tabs" data-group="primary">
+		<a class="item" data-tab="character">{{localize "DCC.Character"}}</a>
+		<a class="item" data-tab="equipment">{{localize "DCC.Equipment"}}</a>
+		<a class="item" data-tab="class">{{localize "VatThing.VatThing}}</a>
+		<a class="item" data-tab="spells">{{localize "DCC.Spells"}}</a>
+		{{#if system.config.showSkills}}
+		<a class="item" data-tab="skills">{{localize "DCC.Skills"}}</a>
+		{{/if}}
+		<a class="item" data-tab="notes">{{localize "DCC.Notes"}}</a>
+	</nav>
+	
+	{{!-- Sheet Body --}}
+	<section class="sheet-body">
+	
+		{{!-- Character Tab --}}
+		{{> systems/dcc/templates/actor-partial-pc-common.html }}
+		
+		{{!-- Equipment Tab --}}
+		{{> systems/dcc/templates/actor-partial-pc-equipment.html }}
+		
+		{{!-- Spells Tab --}}
+		{{>systems/dcc/templates/actor-partial-wizard-spells.html }}
+		
+		{{!-- Skills Tab --}}
+		{{> systems/dcc/templates/actor-partial-skills.html }}
+		
+		{{!-- Notes Tab --}}
+		{{>systems/dcc/templates/actor-partial-pc-notes.html }}
+		
+		{{!-- Class Tab --}}
+		<div class="tab" data-group="primary" data-tab="class">
+			
+			
+			<h4 class="class-label">{{localize "VatThing.VatThingAbilities"}}</h4>
+			<div class="class">
+				<div class="skills-container">
+					<div class="split-50-50"> data-skill="patternDie">
+						<label class="skill-check rollable" for="system.skills.patternDie.die">{{localize "VatThing.PatternDie"}}</label>
+						<input type="text" id="system.skills.patternDie.die" name="system.skills.patternDie.die" value="{{system.skills.patternDie.die}}" data-dtype="String"/>
+					</div>
+			
+			<div class="split-50-50" data-ability="per">
+				<label class="spell-check rollable" for="system.class.spellCheck">{{localize "DCC.SpellCheck"}}</label>
+				<input type="text" id="system.class.spellCheck" name="system.class.spellCheck" value="{{system.skills.spellCheck}}" data-dtype="String"/>
+			</div>
+			
+			<div class="wide split-25-75">
+				<label for="system.class.startingFlaw">{{localize "DCC.StartingFlaw"}}</label>
+				<input class="string" type="text" id="system.class.startingFlaw" name="system.class.startingFlaw" value="{{system.class.startingFlaw}}" data-dtype="String"/>
+			</div>
+			
+			<div class="wide split-25-75">
+				<label for="system.class.creator">{{localize "DCC.Creator"}}</label>
+				<input class="string" type="text" id="system.class.creator" name="system.class.creator" value="{{system.class.creator}}" data-dtype="String"/>
+			</div>
+						
+			<div class="wide split-25-75">
+				<label for="system.class.pattern">{{localize "DCC.pattern"}}</label>
+				<input class="string" type="text" id="system.class.pattern" name="system.class.pattern" value="{{system.class.pattern}}" data-dtype="String"/>
+			</div>
+		</div>
+		
+		<div></div>
+				<ul class="class-note flexcol">
+				<li>
+				{{localize "VatThing.PerspicaciousLearner"}}
+				<ul>
+					<li>{{localize "VatThing.PerspicaciousLearnerDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.Restoration"}}</li>
+				<ul>
+					<li>{{localize "VatThing.RestorationDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.ProteanQuintessence"}}</li>
+				<ul>
+					<li>{{localize "VatThing.ProteanQuintessenceDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.Immunities"}}</li>
+				<ul>
+					<li>{{localize "VatThing.ImmunitiesDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.Luck"}}</li>
+				<ul>
+					<li>{{localize "VatThing.LuckDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.Restoration"}}</li>
+				<ul>
+					<li>{{localize "VatThing.RestorationDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.LifeDeath"}}</li>
+				<ul>
+					<li>{{localize "VatThing.LifeDeathDesc"}}</li>
+					</ul>
+				<li>
+				{{localize "VatThing.PatternDie"}}</li>
+				<ul>
+					<li>{{localize "VatThing.PatternDieDesc"}}</li>
+					</ul>
+			</div>
+		</div>
+	</section>
+</form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

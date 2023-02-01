@@ -1,0 +1,33 @@
+{
+  "title": "DCC Dying Earth Sheets",
+  "description": "Dying Earth Sheets for Dungeon Crawl Classics in FoundryVTT!",
+  "version": "0.0.18",
+  "esmodules": [
+    "module/dcc-de-classes.js"
+  ],
+  "styles": [
+    "styles/de.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "url": 
+  "manifest": 
+  "download": 
+  "license": "LICENSE.txt",
+  "id": "dcc-de-classes",
+  "authors": [
+    {
+      "name": "Kaney Cowart",
+      "flags": {}
+    }
+  ],
+  "compatibility": {
+    "minimum": "10"
+  }
+}
