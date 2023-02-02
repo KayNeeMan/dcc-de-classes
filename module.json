@@ -17,8 +17,8 @@
     }
   ],
   "url": "https://github.com/KayNeeMan/dcc-de-classes",
-  "manifest": "https://raw.githubusercontent.com/KayNeeMan/dcc-de-classes/main/module.json",
-  "download": "https://github.com/KayNeeMan/dcc-de-classes/archive/refs/tags/v1.zip",
+  "manifest": "",
+  "download": "",
   "license": "LICENSE.txt",
   "id": "dcc-de-classes",
   "authors": [
